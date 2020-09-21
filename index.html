@@ -1,0 +1,162 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no ">
+        <!-- Bootstrap CSS inicia aqui -->
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <title>Pasatiempos</title>
+    </head>
+    <body>
+        <div class="container" >
+            <nav class="navbar fixed-top navbar-light bg-light">
+            <a class="navbar-brand" href="#formulario">Formulario Ex</a>
+            <a class="navbar-brand" href="http://google.com">Buscador Ex</a>
+         </nav>
+       </div>
+        <div class="container" style="background-color: aquamarine;">
+            <h1>Hola Mundo! </h1>
+        </div>
+        <div class="container-fluid" id="Ancla">
+            <div class="row">
+              <div class="col" style="background-color:rgb(151, 211, 235)">Pasatiempos Varios</div>
+            </div>
+           </div>
+        
+                <div class="container">
+            <div class="row">
+              <div class="col-xl-1"  style="background-color:rgb(29, 214, 45)">
+                <h1>Columna 1</h1> 
+                <p>Esto es una prueba de bootstrap.</p>
+              </div>
+              <div class="col-xl-3"  style="background-color:rgb(184, 194, 44)">
+                <h1>Columna 2</h1> 
+                <p>Esto es una prueba de bootstrap.</p>
+              </div>
+              <div class="col-xl-8"  style="background-color:rgb(39, 68, 196)">
+                <h1>Columna 3</h1> 
+                <p>Esto es una prueba de bootstrap.</p>
+              </div>
+            </div>
+            <hr>
+         <div class="card text-center" id=Ancla>
+            <div class="card-header">
+              <ul class="nav nav-tabs card-header-tabs">
+                <li class="nav-item">
+                  <a class="nav-link active" href="#Footer">Active</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#Ancla" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
+              </ul>
+            </div>
+         
+            <div class="card-body">
+              <h5 class="card-title">Tambien practice bootstrap profe!</h5>
+              <p class="card-text">Aunque esta muy basado en su ejemplo!</p>
+              <a href="#" class="btn btn-primary">Salir</a>
+            </div>
+            <div class="container">
+              <div class="card" style="width: 18rem;">
+                <img src="http://i1.ytimg.com/vi/iAhifrd859w/maxresdefault.jpg" class="card-img-top" alt="Perrito">
+                <div class="card-body">
+                  <h5 class="card-title">Foto pasatiempo 1</h5>
+                  <p class="card-text">Descripcion</p>
+                  <a href="#Andres" class="btn  btn-outline-primary">Iniciar</a>
+                </div>
+              </div>   
+          </div>
+          </div> 
+          <h2>Revisar los Objetivos hasta abajo de la pagina</h2>
+          <hr>
+        <!-- Vuejs shenanigans -->
+        <h5>V-Model multiples lineas</h2>
+        <div id="appvuej2"> {{ Prueba1 }} </div> 
+        <span>Multilineas ejemplo:</span>
+        <p style="white-space: pre-line;">{{ mensaje3 }}</p>
+        <br>
+        <textarea v-model="mensaje3" placeholder="multiplea lineas"></textarea>
+
+        <hr>
+        <h5>V-Model Linea</h2>
+        
+        <script> var appvuej = new Vue({ el: '#appvuej', data: { message: 'Hello Vue!' } }) </script>
+        <div class="container" style="margin-left: 10%; margin-top: 50px;">
+        <div id="exerciseej">
+        <p>nombre {{ name }}</p>
+        <div>
+        <input v-model="name">
+        </div>
+        </div> 
+
+        <hr>
+        <h5>V-on:click y v-conditional, mismo id</h2>
+        
+        <div id="hideej2">
+        <button class="btn btn-primary" v-on:click="isHidden = !isHidden">Show/hidden</button>
+        <hr>
+        <h2 v-if="!isHidden">Yes hidden</h1>
+        <h2 v-else>No hidden</h1>
+            <hr>
+        <h2>Vue.js for loop "Objetivos"</h2>
+        </div>
+    
+            <div id="apploop">
+            <ul>
+            <li v-for="x in todos">
+            {{ x.text }}
+            </li>
+            </ul>
+            </div>
+            <script>
+            myObject = new Vue({
+                el: '#apploop',
+                data: {
+                todos: [
+                    { text: 'Aprender JavaScript' },
+                    { text: 'Aprender Vue.js' },
+                    { text: 'Hacer tiempo para decorar las paginas de curricula e index' },
+                    { text: 'Entender cual es el rollo con los ids y objetos, y como terminar el ciclo Vuejs' },
+                    { text: 'Hacer el habito de programar' }
+                    ]
+                }
+            })
+            </script>
+            
+        <script src="https://npmcdn.com/vue/dist/vue.js"></script>
+        <script src="https://unpkg.com/vue/dist/vue.js"></script>
+        <script>
+            var app = new Vue({
+            el: '#hideej2',
+            data: {
+                isHidden: false
+            }
+            })
+        </script>
+        <script>
+            var app2=new Vue({
+            el: '#exerciseej',
+            data: {
+                name: 'Captura nombre'
+            }
+        });
+        
+        </script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script> 
+
+        </body>
+        <!-- Si utilizamos componentes de Bootstrap que requieran Javascript agregar estos tres archivos -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+         
+               
+        </html> 
+        
