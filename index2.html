@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang ="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MEXICO</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <title>Turismo</title>
+    </head>
+    <body>
+        <div class="container" style="background-color: rgb(12, 104, 0);">
+            <h1>El Turismo Mexicano </h1>
+        </div>
+        <div class="container-fluid" id="Ancla">
+            <div class="row">
+              <div class="col" style="background-color:rgb(4, 158, 56)">Nuevas Experiencias!</div>
+            </div>
+           </div>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <div id ="app">
+            {{ message }}
+        </div>
+
+        <div id ="hide">
+            <button class = "btn btn-primary" 
+            v-on:click="isHidden = !isHidden">
+                Quiere registrarse al newsletter?</button>
+            <p v-show="!isHidden">
+                <label id=nombre>Registrese!</label>
+                <input placeholder="Ingrese su correo"></p>
+        </div>
+        <script>
+            var app = new Vue({
+                el: '#hide',
+                data: {
+                    isHidden: false
+                }
+            })
+        </script>
+        <script>
+            var app = new Vue({
+                el: '#app',
+                data: {
+                    message: 'Bienvenidos!'
+                }
+            })
+        </script>
+        <h2>Razones para visitar Mexico</h2>
+        </div>
+        <div id="apploop">
+        <ul>
+        <li v-for="x in todos">
+        {{ x.text }}
+        </li>
+        </ul>
+        </div>
+        <script>
+        myObject = new Vue({
+            el: '#apploop',
+            data: {
+            todos: [
+                { text: 'Hermosas Playas' },
+                { text: 'Cultura asombrosa' },
+                { text: 'Cocina sabrosa' },
+                { text: 'Un pasado impresionate' },
+                { text: 'Nuestra impresionante cantidad de diversidad en flora y fauna' }
+                ]
+            }
+        })
+        </script>
+        <h5>Comentarios?</h2>
+                <script> var appvuej = new Vue({ el: '#appvuej', data: { message: 'Hello Vue!' } }) </script>
+                <div class="container" style="margin-left: 10%; margin-top: 50px;">
+                <div id="exerciseej">
+                <p>Disponibles {{ name }}</p>
+                <div>
+                <input v-model="name">
+                </div>
+                </div> 
+                <script>
+            var app2=new Vue({
+            el: '#exerciseej',
+            data: {
+                name: 'Escribir Comentarios'
+            }
+        });
+        
+        </script>
+    </body>
+</html>
