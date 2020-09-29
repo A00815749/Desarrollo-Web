@@ -10,6 +10,7 @@
 <title>Curriculum Andres Barrera</title>
 </head>
 <body style="background-color:bisque" >
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <div class="container" style="background-color: rgb(255, 214, 163);">
     <h1>Andres Carlos Barrera Basilio </h1>
 </div>
@@ -36,5 +37,26 @@
       <p>Placeholders</p>
     </div>
   </div>
+  <h2>Educacion Previa</h2>
+        </div>
+        <div id="apploop">
+        <ul>
+        <li v-for="x in todos">
+        {{ x.text }}
+        </li>
+        </ul>
+        </div>
+        <script>
+        myObject = new Vue({
+            el: '#apploop',
+            data: {
+            todos: [
+                { text: 'Educacion Basica: Oxford School of English' },
+                { text: 'Educacion Media Superior: Centro de Investigacion y Desarrollo de Educacion Bilingue; Diploma Bachillerato Internacional de International Baccelaureate' },
+                { text: 'Bachillerato: Insittuto Tecnologico y de Estudios Superiores de Monterrey' }
+                ]
+            }
+        })
+        </script>
 </body>
 </html>
